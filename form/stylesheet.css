@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(247, 253, 241);
+}
+/* タイトル */
+.title {
+    width: 95%;
+    max-width: 700px;
+    height: 200px;
+    overflow: hidden;
+}
+.top-decoration {
+    width: 100%;
+    height: 10px;
+    border-radius: 8px 8px 0 0;
+    background-color: olivedrab;
+}
+h1 {
+    margin: 30px auto 20px 30px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.border {
+    width: 100%;
+    height: .5px;
+    background-color: #e4e4e4;
+}
+.index_overview {
+    margin: 30px auto 20px 30px;
+    color: red;
+}
+.overview {
+    margin: 30px auto 20px 30px;
+    color: #000;
+}
+
+/*枠・レイアウトのデザイン*/
+form {
+    width: 95%;
+    max-width: 700px;
+    margin: 0 auto 100px;
+
+}
+section {
+    margin: 10px auto;
+    border: .5px solid #e4e4e4;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.section-inner {
+    margin: 15px auto 30px 30px;
+}
+section h2 {
+    margin: 30px 0 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+section h2 span {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* 必須項目の目印 */
+.required::after {
+    content: " *";
+    color: red;
+}
+
+input, select, textarea {
+    margin: 0;
+    border: none;
+    outline: none;
+    transition: .4s;
+}
+
+/* numberの矢印を消す */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance:textfield;
+}
+
+/* テキストのボーダーの設定 */
+
+.input-border {
+    position: relative;
+    max-width: 35%;
+    margin-right: 10px;
+    border-bottom: .5px solid #e4e4e4;
+}
+.input-border::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    width: 100%;
+    height: 1.5px;
+    background:#41893f;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+.input-border:hover {
+    border-bottom: .5px solid #fff;
+}
+.input-border:hover::after {
+    transform: scale(1,1);
+}
+
+/* textareaのサイズを固定 */
+textarea {
+    resize: none;
+  }
+
+/* 横並びにする */
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 確認ボタン */
+.btn {
+    height: 40px;
+    padding: 0px 30px;
+    border-radius: 5px;
+    border: #e4e4e4;
+    color: #fff;
+    font-size: 16px;
+    background-color: #41893f;
+}
+
+.form_border {
+    width: 100%;
+    height: .5px;
+    margin: 50px 0;
+    background-color: #e4e4e4;
+}
+
+.form_dummy {
+    width: 95%;
+    max-width: 700px;
+    margin: 0 auto 100px;
+}
